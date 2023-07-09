@@ -9,14 +9,14 @@ int checkdouble(int array[],int a)
 		ff=1;
 	}
 	return ff;
-	
+
 }
 void value(char s[4][4],int a,int t)
 {
 if (t==1)
 	{
-		
-	
+
+
 	if (a==1)
 	{
 		s[0][0]='X';
@@ -43,7 +43,7 @@ if (t==1)
 	}
 	if (a==7)
 	{
-		s[1][0]='X';
+		s[2][0]='X';
 	}
 	if (a==8)
 	{
@@ -82,7 +82,7 @@ if (t==2)
 	}
 	if (a==7)
 	{
-		s[1][0]='O';
+		s[2][0]='O';
 	}
 	if (a==8)
 	{
@@ -101,7 +101,7 @@ int check(char s)
 	{
 		cout<<"Player 1(X) WIN"<<endl;
 		x++;
-		
+
 	}
 	else if (s=='O')
 	{
@@ -171,11 +171,11 @@ int main()
 	{
 		array[i]=0;
 	}
-	
+
 	int flag=0;
 	int x=0;
 	char s[4][4];
-	
+
 	s[0][0]='1';
 	s[0][1]='2';
 	s[0][2]='3';
@@ -186,7 +186,7 @@ int main()
 	s[2][1]='8';
 	s[2][2]='9';
 	cout<<"USE THE NUMBER MARKED ON BOX TO PUT X OR O ON IT"<<endl;
-	
+
 	cout<<"Player 1 use X"<<endl;
 	cout<<"Player 2 use O"<<endl;
 	print(s);
@@ -206,13 +206,13 @@ int main()
 		cout<<"Enter the box value:";
 		int a;
 		cin>>a;
-		
+
 		while (checkdouble(array,a))
 		{
 			cout<<"THIS PLACE IS ALREADY OCCUPIED"<<endl;
 			cout<<"ENTER THE UNOCCUPIED SPACE:";
 			cin>>a;
-			
+
 		}
 		array[z++]=a;
 		cout<<endl;
@@ -227,24 +227,24 @@ int main()
 		cout<<"Player 2(O) turn"<<endl;
 		cout<<"Enter the box value:";
 		cin>>a;
-		
+
 		while (checkdouble(array,a))
 		{
 			cout<<"THIS PLACE IS ALREADY OCCUPIED"<<endl;
 			cout<<"ENTER THE UNOCCUPIED SPACE:";
 			cin>>a;
-			
+
 		}
 		array[z++]=a;
 		cout<<endl;
 		value(s,a,t);
 		print(s);
 		flag=tic(s);
-		
-		
-		
+
+
+
 	}
 
-	
+
 	return 0;
 }
